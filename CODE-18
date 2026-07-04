@@ -1,0 +1,55 @@
+HYBRID INHERITENCE
+#include <iostream>
+using namespace std;
+
+class Animal
+{
+public:
+    void eat()
+    {
+        cout << "Animal is eating." << endl;
+    }
+};
+
+class Mammal : public Animal
+{
+public:
+    void walk()
+    {
+        cout << "Mammal can walk." << endl;
+    }
+};
+
+class Bird
+{
+public:
+    void fly()
+    {
+        cout << "Bird can fly." << endl;
+    }
+};
+
+class Bat : public Mammal, public Bird
+{
+public:
+    void display()
+    {
+        cout << "Bat is a hybrid inheritance example." << endl;
+    }
+};
+
+int main()
+{
+    Bat b;
+
+    b.eat();
+    b.walk();
+    b.fly();
+    b.display();
+
+    return 0;
+}
+OUTPUT
+Animal is eating.
+Mammal can walk.
+Bird can fly.
