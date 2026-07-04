@@ -1,0 +1,32 @@
+THIS POINTER
+#include <iostream>
+using namespace std;
+
+class Student
+{
+private:
+    int rollNo;
+
+public:
+    void setRollNo(int rollNo)
+    {
+        this->rollNo = rollNo;
+    }
+
+    void display()
+    {
+        cout << "Roll Number = " << rollNo << endl;
+    }
+};
+
+int main()
+{
+    Student s;
+
+    s.setRollNo(101);
+    s.display();
+
+    return 0;
+}
+OUTPUT
+Roll Number = 101
