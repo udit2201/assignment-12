@@ -1,0 +1,20 @@
+LEAP YEAR CHECKER
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int year;
+
+    cout << "Enter a year: ";
+    cin >> year;
+
+    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+        cout << year << " is a Leap Year";
+    else
+        cout << year << " is Not a Leap Year";
+
+    return 0;
+}
+OUTPUTEnter a year: 2024
+2024 is a Leap Year
