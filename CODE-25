@@ -1,0 +1,28 @@
+NESTED EXCEPTION
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    try
+    {
+        try
+        {
+            throw 100;
+        }
+        catch (int x)
+        {
+            cout << "Inner Exception Caught: " << x << endl;
+            throw;
+        }
+    }
+    catch (int x)
+    {
+        cout << "Outer Exception Caught: " << x << endl;
+    }
+
+    return 0;
+}
+OUTPUT
+Inner Exception Caught: 100
+Outer Exception Caught: 100
