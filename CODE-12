@@ -1,0 +1,32 @@
+FRIEND FUNCTION
+#include <iostream>
+using namespace std;
+
+class Demo
+{
+private:
+    int num;
+
+public:
+    Demo()
+    {
+        num = 100;
+    }
+
+    friend void show(Demo);
+};
+
+void show(Demo d)
+{
+    cout << "Value of num = " << d.num << endl;
+}
+
+int main()
+{
+    Demo obj;
+    show(obj);
+
+    return 0;
+}
+OUTPUT
+Value of num = 100
